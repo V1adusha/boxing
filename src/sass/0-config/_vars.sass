@@ -1,0 +1,38 @@
+@use "~sass-rem" as rem
+
+$y-color: #F9BA50
+$w-color: #fff
+// $accent-color: #495d82
+$bg-color: #000
+
+
+// Font-Size
+$big: rem.convert(72px)
+$s-big: rem.convert(64px)
+$med: rem.convert(48px)
+$s-med: rem.convert(20px)
+$reg: rem.convert(18px)
+$s-reg: rem.convert(12px)
+
+//Font-weight:
+$b: 700
+$m: 500
+$r: 400
+
+// size definitions
+$desktop-width: 1290px
+$tablet-width: 992px
+$phone-width: 768px
+
+// mixins
+=desktop
+  @media screen and (max-width: #{$desktop-width})
+    @content
+
+=tablet
+  @media screen and (max-width: #{$tablet-width})
+    @content
+
+=phone
+  @media screen and (max-width: #{$phone-width})
+    @content

@@ -1,0 +1,60 @@
+@use "~sass-rem" as rem
+@use '../0-config/vars' as *
+
+.container
+  width: rem.convert(1290px)
+  margin: 0 auto
+  padding: 0 rem.convert(20px) 
+  box-sizing: border-box
+  +desktop
+    width: 100%
+  +phone
+    width: 100%
+//Title section
+.subtitle
+  font-size: $big
+  font-weight: $b
+  text-transform: uppercase
+  +desktop
+    font-size: rem.convert(36px)
+    line-height: 36px
+// BUTTON STYLE
+
+// Text stroke
+.stroke
+  color: #fff
+  -webkit-text-fill-color: transparent
+  -webkit-text-stroke: thin #fff
+  text-transform: uppercase
+  font-size: rem.convert(64px)
+  font-weight: $b
+  +desktop
+    font-size: rem.convert(36px)
+  +phone
+    font-size: rem.convert(30px)
+
+.btn
+  display: inline-grid
+  grid-auto-flow: column
+  align-items: center
+  padding: rem.convert(17px) rem.convert(40px)
+  width: rem.convert(280px)
+  height: rem.convert(55px)
+  max-width: rem.convert(280px)
+  background: $y-color
+  border: none
+  border-radius: 0px rem.convert(40px) rem.convert(40px) 0px
+  color: $w-color
+  font-size: $reg
+  font-weight: $m
+  text-transform: uppercase
+  .icon
+      display: flex
+      font-size: 0
+      flex-shrink: 0
+      width: rem.convert(25px)
+      height: rem.convert(12px)
+      svg
+          width: 100%
+          height: 100%
+          fill: #fff

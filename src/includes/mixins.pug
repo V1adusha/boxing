@@ -1,0 +1,13 @@
+
+mixin schedule-card(day, count, text, price, oldPrice)
+	.schedule__card
+		.wrap__date
+			span.schedule__days= day
+			span.schedule__count= count
+		p.schedule__description= text
+		.wrap__price
+			span.schedule__price= price
+			span.schedule__price-old= oldPrice
+		include ./button.pug
+
+

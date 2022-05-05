@@ -1,0 +1,100 @@
+@use "~sass-rem" as rem
+@use '../0-config/vars' as *
+
+.header
+	margin-top: rem.convert(20px)
+	padding: 0 rem.convert(20px)
+	margin-bottom: rem.convert(55px)
+	width: 100%
+	+phone
+		margin-bottom: rem.convert(40px)
+	.content
+		width: 100%
+		display: grid
+		grid-template: 1fr / auto 1fr 1fr
+		align-items: center
+		+desktop
+			grid-template: 1fr / auto 2fr 1fr
+		+phone
+			grid-row-gap: rem.convert(10px)
+		.header__logo
+			max-width: rem.convert(110px)
+			max-height: rem.convert(110px)
+			+tablet
+				max-width: rem.convert(100px)
+				max-height: rem.convert(100px)
+				img
+					width: 100%
+					height: 100%
+			+phone
+				max-width: rem.convert(48px)
+				max-height: rem.convert(48px)
+
+		//--Address block--
+		.header__address
+			grid-column: 2 / 3
+			font-size: 1rem
+			font-weight: 500
+			line-height: rem.convert(24px)
+			justify-self: end
+			+desktop
+				justify-self: center
+			+phone
+				grid-column: 1 / -1
+				grid-row: auto-fit
+			.wrap
+				display: grid
+				grid-template: 1fr / auto 3fr
+				align-items: center
+				grid-gap: 0 rem.convert(15px)
+				img
+					grid-column: 1 / 2
+					grid-row: 1
+					
+			+desktop
+				font-size: rem.convert(14px)
+			+phone
+				font-size: rem.convert(13px)
+		// --Contact block--
+		.header__contact
+			grid-column: 3 / 4
+			+phone
+				grid-column: 2 / 4
+				grid-row: 1
+			.wrap
+				display: grid
+				grid-template: 1fr 1fr / 1fr auto
+				align-items: center
+				justify-content: end
+				grid-gap: 0 rem.convert(15px)
+
+				.header__icon-phone
+					grid-column: 1 / 2
+					grid-row: 1 / -1
+					justify-self: end
+				.header__phone
+					grid-column: 2 / 3
+					justify-self: end
+					
+				.header__social
+					grid-column: 2 / 3
+					width: 100%
+					font-size: $s-reg
+					font-weight: $r
+					text-align: right
+					line-height: rem.convert(18px)
+					text-decoration: underline
+					+desktop
+						font-size: rem.convert(10px)
+		.header__icon 
+			height: rem.convert(40px)
+			width: rem.convert(40px)
+			+desktop
+				height: rem.convert(25px)
+				width: rem.convert(25px)
+			+phone
+				height: rem.convert(20px)
+				width: rem.convert(20px)
+
+
+

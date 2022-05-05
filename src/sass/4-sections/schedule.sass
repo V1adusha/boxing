@@ -1,0 +1,94 @@
+@use "~sass-rem" as rem
+@use '../0-config/vars' as *
+
+
+.schedule
+	margin-bottom: rem.convert(250px)
+	+desktop
+		margin-bottom: rem.convert(170px)
+	+phone
+		margin-bottom: rem.convert(60px)
+	.content
+		display: grid
+		grid-template: repeat(2, auto) / 1fr
+		grid-row-gap: rem.convert(100px)
+		+desktop
+			grid-row-gap: rem.convert(60px)
+		+phone
+			grid-row-gap: rem.convert(40px)
+		.schedule__cards
+			display: grid
+			grid-template: auto / repeat(3, 1fr)
+			grid-auto-flow: row
+			grid-gap: rem.convert(30px)
+			+desktop
+				grid-template-columns: 1fr 1fr 
+				grid-gap: rem.convert(20px)
+			+phone
+				grid-template-columns: 1fr
+			.schedule__card
+				display: grid
+				grid-template: auto / 1fr
+				grid-auto-flow: row
+				padding: rem.convert(30px) rem.convert(30px) rem.convert(40px) rem.convert(30px) 
+				background-color: #17171A
+				grid-row-gap: rem.convert(55px)
+				+desktop
+					grid-row-gap: rem.convert(30px)
+				.wrap__date
+					grid-column: 1 / -1
+					display: flex
+					justify-content: space-between
+					.schedule__days
+						font-size: rem.convert(36px)
+						font-weight: $b
+						+desktop
+							font-size: rem.convert(24px)
+
+					.schedule__count
+						font-weight: $r
+						font-size: rem.convert(16px)
+						align-self: end
+				.schedule__description
+					grid-column: 1 / -1
+					font-size: rem.convert(18px)
+					font-weight: $m
+					line-height: rem.convert(24px)
+					+desktop
+						margin-bottom: rem.convert(30px)
+						font-size: rem.convert(14px)
+					+phone
+						margin-bottom: rem.convert(10px)
+				.wrap__price
+					grid-column: 1 / -1
+					display: flex
+					justify-content: space-between
+					margin-bottom: rem.convert(-20px)
+					+desktop
+						margin-bottom:  0
+						justify-content: start
+						gap: rem.convert(30px)
+					.schedule__price
+						font-size: rem.convert(36px)
+						font-weight: $b
+					.schedule__price-old
+						font-size: rem.convert(24px)
+						font-weight: $b
+						text-decoration-line: line-through
+						align-self: end
+						+desktop
+							font-size: rem.convert(18px)
+				.btn
+					grid-column: 1 / -1	
+
+
+
+
+
+//- .schedule__card
+//- 	span.schedule__days= day
+//- 	span.schedule__days-count= count
+//- 	p.schedule__card-desc= text
+//- 	span.schedule__price= price
+//- 	span.schedule__price-old= oldPrice
+//- 	include ./button.pug
