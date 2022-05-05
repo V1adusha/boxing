@@ -1,7 +1,7 @@
 {
-  "name": "webpack5-pug-sass-starter",
+  "name": "webpack",
   "version": "1.0.0",
-  "description": "Webpack 5 configuration for Single or Multipage websites using Pug, Sass, PostCSS, Babel and Browsersync",
+  "description": "Webpack",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --mode development",
     "build": "cross-env NODE_ENV=production webpack --mode production",
@@ -18,7 +18,7 @@
     "sass",
     "pug"
   ],
-  "author": "Elena Bravo",
+  "author": "...",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "7.17.9",
@@ -70,10 +70,6 @@
     "webpack": "^5.72.0",
     "webpack-cli": "4.9.2",
     "webpack-dev-server": "4.8.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/elenabravo/webpack5-pug-sass-starter"
   },
   "husky": {
     "hooks": {
